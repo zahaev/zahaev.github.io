@@ -1,8 +1,7 @@
 
-#shap {
-    max-width: 960px;
-    background-color: gray;
-    margin: 0 auto;
+#footer {
+    background-image:url(back.jpg);
+    margin-top:20px;
     padding: 10px;
-    text-align: left;
+    font-size:25px;
 }
