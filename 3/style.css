@@ -1,96 +1,156 @@
-body {
-    background-color: #ba6f54;
-    font-family: 'Open Sans', sans-serif;
+/* основа */
+* { /* изначальные настройки, коткорые убирают грань с боков*/
+    margin: 0;
+    padding: 0;
 }
 
-
-/* ����� */
-header {
-    background-color: #F0D2BB;
-    border-bottom: 5px solid #f7b186;
-    color: white;
+html {
+    background-color: #ba6f54; /* цвет */
+    color: white; /* цвет любых слов, кроме ссылок */
+    font-family: 'Open Sans', sans-serif; /* шрифт */
 }
 
-#navigation {
-    background-color: #F2B996;
-    border: 5px solid #f7b186;
-    list-style: none;
+/* верхняя шапка */
+#header {
+    background-color: #F0D2BB; /* цвет */
+    font-size: 24px; /* размер слов */
 }
 
-    #navigation li:hover {
-        background-color: #fbd5be;
-        transition: 0.4s ease-in-out;
+.header_name {
+    padding-top: 50px; /* отступ сверху */
+}
+
+.logo {
+    float: left; /* расположение */
+    padding-right: 20px; /* отступ справа */
+}
+
+/* навигация */
+#nav {
+    background-color: #F2B996; /* цвет */
+    border: 8px solid #f7b186; /* рамка и ее цвет */
+    padding: 15px; /* отстпы и поля */
+    margin-bottom: 20px; /* отсуп снизу */
+}
+
+    #nav ul {
+        display: flex; /* !!! */
+        flex-direction: column;
+        justify-content: center; /* выравнивание по центру */
+        align-items: center;
+        list-style: none; /* маркер списка */
+        font-size: 50px; /* размер слов */
     }
 
-/* ������ */
+/* в основном ссылки */
+#header, #hyperlinks {
+    margin-bottom: 20px; /* отступ снизу*/
+    padding: 7vw; /* отступы и поля */
+}
+
 #hyperlinks {
-    background-color: #F2B996;
-    border: 5px solid #f7b186;
-    color: white;
+    background-color: #F2B996; /* основной цвет */
+    border: 8px solid #f7b186; /* рамка и ее цвет */
 }
 
-    #hyperlinks li {
-        transition: 0.5s ease-in-out;
-    }
-
-        #hyperlinks li:hover {
-            background-color: #F2B996;
-        }
-
-/* ����� */
-
-form {
-    color: white;
-    background-color: #F2B996;
-    border: 5px solid #f7b186;
-}
-
-
-/* ��� */
-#footer {
-    border-top: 5px solid #f7b186;
-    background-color: #F0D2BB;
-    color: white;
-}
-
-/* ������� */
-
+/* таблица */
 table {
-    border-collapse: collapse;
-    border: 5px solid #f7b186;
+    border: 8px solid #F2B996; /* рамка и ее цвет */
+    text-align: center; /* выравнивание текста */
+    border-collapse: collapse; /* внутринние границы в таблице */
 }
 
-#tt {
-    background-color: #ffd4c1;
-}
-
-td {
-    transition: 0.8s ease-in-out;
+td, th {
+    width: 150px;
+    padding: 5px; /* отступы и поля */
+    font-size: 30px; /* рамер слов */
 }
 
 tr:nth-child(odd) {
-    color: white;
-    background-color: #ffd4c1;
+    background-color: #ffd4c1; /* цвет */
 }
 
 tr:nth-child(even) {
-    color: white;
-    background-color: #e0ab8b;
+    background-color: #e0ab8b; /* цвет */
 }
 
-td:hover {
-    background-color: #c7645b;
+/* форма */
+
+#form {
+    background-color: #F2B996; /* цвет */
+    border: 8px solid #f7b186; /* цвет */
+    margin: 0 auto; /* отступы */
+    margin-bottom: 20PX;
+    font-size: 40px; /* рамер слов */
 }
 
-/* ������ */
+/* подвал ссайта */
+#footer {
+    background-color: #F0D2BB; /* цвет */
+    padding: 10px; /* отступы и поля */
+    margin-top: 8px; /* отступ сверху */
+    font-size: 25px; /* размер слов */
+}
 
+/* дополнительно */
 a {
-    text-decoration: none;
-    transition: 0.7s ease-in-out;
-    color: white;
+    color: white; /* цвет тектса */
+    text-decoration: none; /* убрать линию ссылки */
+    transition: 0.7s ease-in-out; /* мягкий перелив цвета при наведении */
 }
 
     a:hover {
-        text-decoration: none;
-        color: rgb(131, 0, 0);
+        color: rgb(131, 0, 0); /* цвет */
     }
+
+.container {
+    width: 95%;
+    ; /* размер контейнеров */
+    margin: 0 auto; /* отступы */
+    padding: 0; /* отступы и поля */
+}
+
+.form-tabl {
+    display: flex;
+    flex-direction: column;
+}
+
+.flexform {
+    order: -1; /* порядок вывода */
+}
+
+#cont {
+    display: flex;
+}
+/*  */
+@media screen and (min-width: 1200px) { /* !!! */
+    .container {
+        max-width: 960px;
+    }
+
+    #form {
+        font-size: medium; /* рамер слов */
+    }
+
+    td, th {
+        font-size: 15px; /* рамер слов */
+    }
+
+    .flexform {
+        order: 0; /* порядок вывода */
+    }
+
+    #nav ul {
+        flex-direction: row; /* вывод горизонтально */
+        justify-content: space-around; /* расположение кнопок с одинаковым интервалом */
+        font-size: 30px; /* размер буковок */
+    }
+
+    #header, #hyperlinks {
+        padding: 2vw; /* отступы и поля */
+    }
+
+    #container {
+        font-size: 13pt; /* размер слов */
+    }
+}
