@@ -4,7 +4,7 @@ body {
 }
 
 
-/* шапка */
+/* ГёГ ГЇГЄГ  */
 header {
     background-color: #F0D2BB;
     border-bottom: 5px solid #f7b186;
@@ -22,7 +22,7 @@ header {
         transition: 0.4s ease-in-out;
     }
 
-/* ссылки */
+/* Г±Г±Г»Г«ГЄГЁ */
 #hyperlinks {
     background-color: #F2B996;
     border: 5px solid #f7b186;
@@ -37,7 +37,7 @@ header {
             background-color: #F2B996;
         }
 
-/* форма */
+/* ГґГ®Г°Г¬Г  */
 
 form {
     color: white;
@@ -46,14 +46,14 @@ form {
 }
 
 
-/* дно */
+/* Г¤Г­Г® */
 #footer {
     border-top: 5px solid #f7b186;
     background-color: #F0D2BB;
     color: white;
 }
 
-/* таблица */
+/* ГІГ ГЎГ«ГЁГ¶Г  */
 
 table {
     border-collapse: collapse;
@@ -82,7 +82,7 @@ td:hover {
     background-color: #c7645b;
 }
 
-/* прочее */
+/* РїСЂРѕС‡РµРµ */
 
 a {
     text-decoration: none;
