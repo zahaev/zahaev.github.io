@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework</title>
+</head>
+
+<body class="p-0 m=0">
+    <header class="mb-3 p-2">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-4 col-md-3 col-lg-2">
+                    <img src="coffe.png" width="150" class="logo" alt="logo">
+                </div>
+                <div class="col-auto">
+                    <h1 class="site_title col-sm-4 col-lg-12">Excellent coffee</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container max-width-lg mx-auto">
+
+        <!-- навигация -->
+        <div>
+            <ul class="row text-center p-0" id="navigation">
+                <li class="col-sm-4"><a href="form">Home</a></li>
+                <li class="col-sm-4"><a href="about/name.html">About</a></li>
+                <li class="col-sm-4"><a href="https://vk.com/dir.almeri">Contacts</a></li>
+            </ul>
+        </div>
+        <main>
+
+            <!-- ссылки -->
+            <div class="order-0">
+                <div id="hyperlinks" class="row d-flex flex-column">
+                    <h3 id="parag" class="text-center">Список гиперссылок:</h3><br>
+                    <ol>
+                        <li class="col-12"> <a href="http://example.com">Главная страница сайта example.com</a> </li>
+                        <li class="col-12">
+                            <a href="https://example.com">
+                                Главная страница сайта example.com в протоколе
+                                https
+                            </a>
+                        </li>
+                        <li class="col-12">
+                            <a href="ftp://dginni.ru/file/sigma.txt">
+                                Файл sigma.txt (нужна
+                                регистрация)
+                            </a>
+                        </li>
+                        <li class="col-12"> <a href="ftp://admin:admin@dginni.ru/file/sigma.txt">Файл sigma.txt</a></li>
+                        <li class="col-12">
+                            <a href="https://ru.wikipedia.org/wiki/%D0%90%D1%81%D1%82%D0%B0%D1%84%D0%B5%D0%B9,_%D0%90%D0%BB%D0%B8%D0%BD%D0%B0#:~:text=%5B6%5D.-,%D0%A1%D0%B5%D0%BC%D1%8C%D1%8F,-%5B%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D1%82%D1%8C%20%7C">
+                                Фрагмент
+                                википедии
+                            </a>
+                        </li>
+                        <li class="col-12"> <a href="#123">фрагмент текущей страницы</a> </li>
+                        <li class="col-12">
+                            <a href="https://www.citilink.ru/catalog/noutbuki/?text=%D0%BD%D0%BE%D1%83%D1%82%D0%B1%D1%83%D0%BA&p=2">Ссылка</a>
+                        </li>
+                        <li class="col-12">
+                            Доп навигация сайта:
+                            <nav>
+                                <ul>
+                                    <li class="col-12">
+                                        <a href="#header" title="Задания для Веб разработки">
+                                            Начало
+                                            сайта
+                                        </a>
+                                    </li>
+                                    <li class="col-12"><a href="#form" title="Регистрационная форма">Форма</a></li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="col-12"> <a> https://example.com/ </a> </li>
+                        <li class="col-12"> <a href="">Ссылка с пустым href</a> </li>
+                        <li class="col-12">
+                            <a href="https://vseigru.net/" rel="nofollow">
+                                Ссылка, по которой запрещен
+                                переход поисковикам
+                            </a>
+                        </li>
+                        <li class="col-12">
+                            <!--<noindex>--><a href="https://vseigru.net/">
+                                Ссылка, запрещенная для индексации
+                                поисковиками
+                            </a>
+                            <!--</noindex>-->
+                        </li>
+                        <li class="col-12">
+                            <a id="123"></a>
+                            <p>
+                                Ру́сская <a title="13) контекстную в тексте абзаца"
+                                            href="https://ru.wikipedia.org/">Википе́дия</a> — русскоязычный раздел Википедии,
+                                основанный 11 мая 2001 года.
+                            </p>
+                        </li>
+                        <li class="col-12">
+                            <a href="https://zakazcoffee.ru/">
+                                <img src="https://icdn.lenta.ru/images/2022/02/10/19/20220210192446931/pwa_vertical_768_d6a4f60dd689b287869e76e8be504462.jpg"
+                                     title="ссылка-изображение" alt="Кофе" width="150">
+                            </a>
+                        </li>
+                        <li class="col-12">
+                            <img src="https://webgolovolomki.com/wp-content/uploads/2021/01/znimok-ekrana-2021-01-23-o-19.46.15.png"
+                                 alt="ERROR" usemap="#push" title="ссылки из прямоугольных облостей картинки" width="150"
+                                 height="100">
+
+                            <map name="push">
+                                <area shape="rect" coords="27,19,120,80" href="https://moodle.kubsu.ru/"
+                                      title="ссылки из прямоугольных облостей картинки" alt="ERROR">
+                            </map>
+
+                            <img src="https://irecommend.ru/sites/default/files/product-images/144821/cS6lCcP4oqOoETPi5kFqYQ.jpg"
+                                 title="ссылки из круглых областей картинки" alt="ERROR" usemap="#nopush" width="150"
+                                 height="100">
+
+                            <map name="nopush">
+                                <area shape="circle" coords="73,45,23" title="ссылки из круглых областей картинки"
+                                      alt="ERROR"
+                                      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4J6ZgxyWGU0JUVZEE5BH24QgYCLa6yUlz_yX9v7jZI19_FVjfSHb3dLUUVl8Tn3AHGh4&usqp=CAU">
+                            </map>
+                        </li>
+                        <li class="col-12"> <a href="Panthera_tigris.html">Страница в текущем каталоге</a> </li>
+                        <li class="col-12"> <a href="about/web.html">На страницу в каталоге about</a> </li>
+                        <li class="col-12"> <a href="../web.html">Вернуться на 1 уровень выше</a> </li>
+                        <li class="col-12"> <a href="../../index.html">Вернуться на 2 уровень выше</a> </li>
+                        <li class="col-12"> <a href="/index.html">Главная (сокращенная ссылка)</a> </li>
+                        <li class="col-12"> <a href="/Panthera_tigris.html">Внутренняя (сокращенная сссылка)</a> </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- таблица -->
+            <div class="d-flex flex-column row">
+                <div class="order-2 order-md-1 mt-3">
+                    <table class="table">
+                        <tr>
+                            <th colspan="4" class="col-12 text-center" id="tt">Сорта кофе</th>
+                        </tr>
+                        <tr>
+                            <td class="col-2 text-center">Аруша</td>
+                            <td class="col-2 text-center">Бенге</td>
+                            <td class="col-2 text-center">Бурбон</td>
+                            <td class="col-2 text-center">Катуаи</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2 text-center">Катурра</td>
+                            <td class="col-2 text-center">Шарье</td>
+                            <td class="col-2 text-center">Харар</td>
+                            <td class="col-2 text-center">Сидамо</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2 text-center">Гейша</td>
+                            <td class="col-2 text-center">Бонифьер</td>
+                            <td class="col-2 text-center">Кона</td>
+                            <td class="col-2 text-center">Ява</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2 text-center">Мокко</td>
+                            <td class="col-2 text-center">Пакас</td>
+                            <td class="col-2 text-center">Сагада</td>
+                            <td class="col-2 text-center">Сантос</td>
+                        </tr>
+                        <tr>
+                            <td class="col-2 text-center">Сарчимор</td>
+                            <td class="col-2 text-center">Типика</td>
+                            <td class="col-2 text-center">Уганда</td>
+                            <td class="col-2 text-center">Стармайя</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="order-1 order-md-2 mt-lg-0 mt-3">
+                    <!-- ФОРМА -->
+                    <form action="/" class="container">
+                        <div class="formgroup">
+                            <h2>Форма</h2>
+                            <br>
+                            <label>Имя: </label>
+                            <input type="text" class="form-control  сol-4 col-lg-2" required>
+                            <br>
+
+                            <label>e-mail: </label>
+                            <input type="email" class="form-control  сol-4 col-lg-2" required>
+                            <br>
+
+                            <label>Дата рождения: </label>
+                            <input type="date" class="form-control  сol-4 col-lg-2" required>
+                            <br>
+
+                            <label>Пол: </label><br>
+                            <label>
+                                <input type="radio" value="value-1" name="people" required>Мужской
+                            </label>
+                            <label>
+                                <input type="radio" value=" value-2" name="people" required>Женский
+                            </label>
+                            <br>
+                            <br>
+
+                            <label>Количество конечностей: <br></label>
+                            <label>
+                                <input type="radio" value="1" name="hand" required>1
+                            </label>
+                            <label>
+                                <input type="radio" value="2" name="hand" required>2
+                            </label>
+                            <label>
+                                <input type="radio" value="3" name="hand" required>3
+                            </label>
+                            <label>
+                                <input type="radio" value="4" name="hand" required>4
+                            </label>
+                            <br>
+                            <br>
+
+                            <label>Сверхспособности:</label><br>
+                            <select name="cool">
+                                <option value="Missing">Отсутствуют</option>
+                                <option value="Immortality">Бессмертие</option>
+                                <option value="Passing">Прохождение сквозь стены</option>
+                                <option value="Levitation">Левитация</option>
+                                <option value="regeneration">Регенерация</option>
+                            </select>
+                            <br>
+                            <br>
+
+                            <label>Биография:</label><br>
+                            <textarea name="field" cols="50" rows="10" required class="form-control  сol-6 col-lg-3"></textarea>
+                            <br>
+                            <div class="checkbox">
+                                <label for="submit">
+                                    <input type="checkbox" id="submit"> С контрактом ознакомлен
+                                </label>
+                            </div>
+                            <label>
+                                <button type="button">Отправить</button>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="order-3 mt-lg-3 mb-3 mb-lg-0 text-center">
+                    <form id="calc" class="pl-3">
+                        <label>
+                            Стоимость товара: <br>
+                            <input class="mt-1 form-control col-12" id="stoim" type="text">
+                        </label> <br>
+                        <label>
+                            Количество товаров: <br>
+                            <input class="mt-1 form-control col-12" id="colvo" type="text">
+                        </label><br>
+
+                        <label>
+                            <button type="button" id="but">Рассчитать</button>
+                        </label>
+
+                        <div id="rezult"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer id="footer" class="container-fluid p-4 mt-lg-3 mt-sm-0">
+        (c) Лихачев Кирилл 2022
+    </footer>
+
+    <script src="add.js"></script>
+</body>
+
+</html>
