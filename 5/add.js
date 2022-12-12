@@ -4,11 +4,11 @@ function umnoz(){
     let rezult = document.getElementById("rezult");
 
     if(stoim ==="" || colvo ==="")
-        rezult.innerHTML = "Вы не ввели стоимость или количесво товара"
+        rezult.innerHTML = "РЅРµ РІРІРµРґРµРЅР° СЃС‚РѕРёРјРѕСЃС‚СЊ/РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°"
     else if(stoim != parseInt(stoim) || colvo != parseInt(colvo) || parseInt(colvo)<0 || parseInt(stoim)<0)
-        rezult.innerHTML = "Одно из полей содержит недопустимое условие для задачи или недопустимые символы";
+        rezult.innerHTML = "РћРґРЅРѕ РёР· РїРѕР»РµР№ СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјРѕРµ СѓСЃР»РѕРІРёРµ РґР»СЏ Р·Р°РґР°С‡Рё РёР»Рё РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹";
     else
-        rezult.innerHTML = "Результат: " + parseInt(colvo)*parseInt(stoim); 
+        rezult.innerHTML = "Р РµР·СѓР»СЊС‚Р°С‚: " + parseInt(colvo)*parseInt(stoim); 
 }
 
 window.addEventListener("DOMContentLoaded", function() {
