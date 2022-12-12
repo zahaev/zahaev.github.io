@@ -1,14 +1,15 @@
+<!---С‡РµРє СѓР±РёСЂР°РµС‚СЃСЏ Р° РєРЅРѕРїРєР° РЅРµС‚ --->
 function umnoz() {
     let stoim = document.getElementById("stoim").value;
     let colvo = document.getElementById("colvo").value;
     let rezult = document.getElementById("rezult");
 
     if (stoim == "" || colvo == "")
-        rezult.innerHTML = "Вы не ввели стоимость или количесво товара"
+        rezult.innerHTML = "Г‚Г» Г­ГҐ ГўГўГҐГ«ГЁ Г±ГІГ®ГЁГ¬Г®Г±ГІГј ГЁГ«ГЁ ГЄГ®Г«ГЁГ·ГҐГ±ГўГ® ГІГ®ГўГ Г°Г "
     else if (stoim != parseInt(stoim) || colvo != parseInt(colvo) || parseInt(colvo) < 0 || parseInt(stoim) < 0)
-        rezult.innerHTML = "Одно из полей содержит недопустимое условие для задачи или недопустимые символы";
+        rezult.innerHTML = "ГЋГ¤Г­Г® ГЁГ§ ГЇГ®Г«ГҐГ© Г±Г®Г¤ГҐГ°Г¦ГЁГІ Г­ГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г®ГҐ ГіГ±Г«Г®ГўГЁГҐ Г¤Г«Гї Г§Г Г¤Г Г·ГЁ ГЁГ«ГЁ Г­ГҐГ¤Г®ГЇГіГ±ГІГЁГ¬Г»ГҐ Г±ГЁГ¬ГўГ®Г«Г»";
     else
-        rezult.innerHTML = "Результат: " + parseInt(colvo) * parseInt(stoim);
+        rezult.innerHTML = "ГђГҐГ§ГіГ«ГјГІГ ГІ: " + parseInt(colvo) * parseInt(stoim);
 }
 
 window.addEventListener("DOMContentLoaded", function () {
@@ -58,7 +59,7 @@ window.addEventListener("DOMContentLoaded", function () {
             d10Dice.style.display = "block";
             mid.style.display = "block";
             sacDice.style.display = "none";
-            rezult.innerHTML = "Вы выбрали не все параметры";
+            rezult.innerHTML = "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г­ГҐ ГўГ±ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»";
 
             let sum, kolvo, bool1, bool2;
 
@@ -86,8 +87,8 @@ window.addEventListener("DOMContentLoaded", function () {
                 bool = bool1 * bool2;
 
                 if (bool && colDice[0].value != "" && colDice[0].value == parseInt(colDice[0].value)) return rezult.innerHTML = sum * kolvo * colDice[0].value;
-                else if (!bool || colDice[0].value == "") rezult.innerHTML = "Вы выбрали не все параметры";
-                else rezult.innerHTML = "В строке количества не все символы - цифры";
+                else if (!bool || colDice[0].value == "") rezult.innerHTML = "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г­ГҐ ГўГ±ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»";
+                else rezult.innerHTML = "Г‚ Г±ГІГ°Г®ГЄГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г­ГҐ ГўГ±ГҐ Г±ГЁГ¬ГўГ®Г«Г» - Г¶ГЁГґГ°Г»";
             }
 
             d10Var.forEach(function (d10Vars) {
@@ -112,18 +113,18 @@ window.addEventListener("DOMContentLoaded", function () {
             sacDice.style.display = "block";
             radioDice.style.display = "none";
             d10Dice.style.display = "none";
-            rezult.innerHTML = "Вы выбрали не все параметры";
+            rezult.innerHTML = "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г­ГҐ ГўГ±ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»";
 
             let sacCube = document.querySelector("#sacCube");
 
-            if (colDice[0].value == "") rezult.innerHTML = "Введите количество товара";
+            if (colDice[0].value == "") rezult.innerHTML = "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГІГ®ГўГ Г°Г ";
             else rezult.innerHTML = priceList[6] * colDice[0].value;
 
             function d100() {
                 if (sacCube.checked && colDice[0].value != "" && colDice[0].value == parseInt(colDice[0].value)) rezult.innerHTML = (priceList[6] + priceList[7]) * colDice[0].value;
                 else if (colDice[0].value != "" && colDice[0].value == parseInt(colDice[0].value)) rezult.innerHTML = priceList[6] * colDice[0].value;
-                else if (colDice[0].value == "") rezult.innerHTML = "Введите количество товара";
-                else rezult.innerHTML = "В строке количества не все символы - цифры";
+                else if (colDice[0].value == "") rezult.innerHTML = "Г‚ГўГҐГ¤ГЁГІГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ® ГІГ®ГўГ Г°Г ";
+                else rezult.innerHTML = "Г‚ Г±ГІГ°Г®ГЄГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г­ГҐ ГўГ±ГҐ Г±ГЁГ¬ГўГ®Г«Г» - Г¶ГЁГґГ°Г»";
             }
 
             document.querySelector("#sacCube").addEventListener("click", () => { d100(); });
@@ -139,7 +140,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 sacDice.style.display = "none";
                 d10Dice.style.display = "none";
 
-                rezult.innerHTML = "Вы выбрали не все параметры";
+                rezult.innerHTML = "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г­ГҐ ГўГ±ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»";
 
                 function d() {
                     if (colDice[0].value != "" && colDice[0].value == parseInt(colDice[0].value)) {
@@ -151,8 +152,8 @@ window.addEventListener("DOMContentLoaded", function () {
                             }
 
                     }
-                    else if (colDice[0].value == "") rezult.innerHTML = "Вы выбрали не все параметры";
-                    else rezult.innerHTML = "В строке количества не все символы - цифры";
+                    else if (colDice[0].value == "") rezult.innerHTML = "Г‚Г» ГўГ»ГЎГ°Г Г«ГЁ Г­ГҐ ГўГ±ГҐ ГЇГ Г°Г Г¬ГҐГІГ°Г»";
+                    else rezult.innerHTML = "Г‚ Г±ГІГ°Г®ГЄГҐ ГЄГ®Г«ГЁГ·ГҐГ±ГІГўГ  Г­ГҐ ГўГ±ГҐ Г±ГЁГ¬ГўГ®Г«Г» - Г¶ГЁГґГ°Г»";
                 }
 
                 let materil = document.querySelectorAll("input[name=mater]");
