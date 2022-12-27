@@ -1,0 +1,221 @@
+body {
+	background-color: #ba6f54;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+/* шапка */
+header {
+	background-color: #F0D2BB;
+	border-bottom: 5px solid #f7b186;
+	color: white;
+}
+
+#navigation {
+	background-color: #F2B996;
+	border: 5px solid #f7b186;
+	list-style: none;
+}
+
+#navigation li:hover {
+	background-color: #fbd5be;
+	transition: 0.4s ease-in-out;
+}
+
+/* popup */
+*, *:before, *:after {
+	box-sizing: border-box;
+  }
+  span.title {
+	display: block;
+	text-align: center;
+	margin: 15px auto;
+  }
+  .basicBox, .basicBoxs , .basicBoxes{
+	text-transform: uppercase;
+	width: 130px;
+	height: 65px;
+	text-align: center;
+	line-height: 65px;
+	margin: 10px auto;
+	position: relative;
+	cursor: pointer;
+  }
+  svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+  svg rect {
+	stroke: #f7b186;
+	stroke-width: 7;
+	transition: 0.8s;
+	stroke-dasharray: 200, 0;
+  }
+  .basicBox:hover svg rect {
+	stroke-width: 10;
+	stroke-dasharray: 70, 245;
+	stroke-dashoffset: 91
+  }
+
+  .basicBoxs:hover svg rect {
+    stroke-width: 10;
+    stroke-dasharray: 108, 245;
+    stroke-dashoffset: 147
+  }
+
+
+.popup-bg, .popup-bg-2{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+
+.popup, .popup-2{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 600px;
+	background: #F0D2BB;
+	border: 5px solid #f7b186;
+	padding: 20px;
+	transform: translate(-50%,-50%);
+	color: white;
+}
+
+.popup{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.no-slide{
+	overflow-y: hidden;
+}
+
+/* popup 2 */
+
+#otpravka1, #otpravka2, #otpravka3{
+	display: none;
+}
+
+.basicBoxes:hover svg rect {
+    stroke-width: 10;
+    stroke-dasharray: 108, 245;
+    stroke-dashoffset: 147
+  }
+
+/* ссылки */
+#hyperlinks {
+	background-color: #F2B996;
+	border: 5px solid #f7b186;
+	color: white;
+}
+
+#hyperlinks li {
+	transition: 0.5s ease-in-out;
+}
+
+#hyperlinks li:hover {
+	background-color: #F2B996;
+}
+
+a {
+	text-decoration: none;
+	transition: 0.7s ease-in-out;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none;
+	color: rgb(131, 0, 0);
+}
+
+/* слайдер */
+
+#slidelinks {
+	background-color: #f7b186;
+}
+
+#slidelinks img {
+	border: 7px solid #f7b186;
+	width: 100%;
+}
+
+/* форма */
+
+form {
+	color: white;
+	background-color: #F2B996;
+	border: 5px solid #f7b186;
+}
+
+form input.kon, form textarea{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* дно */
+#footer {
+	border-top: 5px solid #f7b186;
+	background-color: #F0D2BB;
+	color: white;
+}
+
+/* таблица */
+
+table {
+	border-collapse: collapse;
+	border: 5px solid #f7b186;
+}
+
+#tt {
+	background-color: #ffd4c1;
+}
+
+td {
+	transition: 0.8s ease-in-out;
+}
+
+tr:nth-child(odd) {
+	color: white;
+	background-color: #ffd4c1;
+}
+
+tr:nth-child(even) {
+	color: white;
+	background-color: #e0ab8b;
+}
+
+td:hover {
+	background-color: #c7865d;
+}
+
+/* прочее */
+
+#center {
+	display: flex;
+	justify-content: center;
+}
+
+.bott button {
+	background-color: rgb(238, 169, 117);
+	border: 3px solid #f7b186;
+	color: white;
+}
+
+.bott button:hover {
+	background-color: #F0D2BB;
+	border: 3px solid #f7b186;
+	color: white;
+}
+
+#radioDice , #sacDice, #d10Dice, #mid{
+	display: none;
+}
