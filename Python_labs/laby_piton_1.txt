@@ -1,0 +1,321 @@
+#1.1
+def func(n):
+    rez = 0
+    for i in range(1, n + 1):
+        r = 0
+        if n % i == 0:
+            for d in range(1, i + 1):
+
+                if i % d == 0:
+                    r = r + 1
+        if r > 2:
+            rez += i
+
+    return rez
+n=(int(input())
+print(func(n))
+
+#1.2
+def func(n):
+    rez = 0
+    while n!=0:
+        print("n=",n)
+        if n % 10 <3 :
+            rez += 1
+        n=n/10
+    return rez
+n=(int(input())
+print(func(n))
+
+#1.3
+def func(n):
+    o=n
+    p=n
+    sum = 0def find
+    while o != 0:
+        r2 = n % 10
+        k1 = 0
+        for r in range(1, r2 + 1):  # cуммирование простых цифр
+            if r2 % r == 0:  # проверка на простоту
+                k1 += 1
+        if k1 == 2:
+            sum += k1
+        o = o / 10
+    while p!= 0:
+        if p%10!=0:
+            i=n%10 #выделение цифры из числа
+            k=0
+            for r in range(1, i + 1):#ПРОВЕРКА НА  НЕ    ВЗАИМОПРОСТОТУ ЦИФЫ И ЧИСЛА
+                if i%r==0 and n%r==0:
+                    k+=1
+            if k>1:
+                k2=0
+                for r in range (1,i+1):# проверка суммы простых цифр на взаимопростоту с цифрой
+                    if i % r == 0 and sum % r == 0:
+                        k2 += 1
+            if(k2==1):
+                k+=1
+        p=p/10
+        print("k=", k)
+n = int(input())
+print(func(n))
+
+#2
+import random
+
+text_fynal = []
+
+texts = str(input('Введите предложение: \n >>> '))
+texts = texts.split()
+
+for text in texts:
+    text_list = []
+    for simbol in text:
+        text_list.append(simbol)
+
+    first_simbol = text_list[0]
+    last_simbol = text_list[len(text_list) - 1]
+
+    del text_list[0]
+    del text_list[len(text_list) - 1]
+
+    random.shuffle(text_list)
+    text_list = ''.join(text_list)
+    ok_text = first_simbol + text_list + last_simbol
+    text_fynal.append(ok_text)
+
+print(' '.join(text_fynal))
+#3
+s = 'abhb550123jwfdd87'
+print(''.join(sorted(s)))
+#4
+import random
+
+words = ["Cu", "Clan", "Clus", "Merry", "Christmas,"]
+
+for i in range(len(words)):
+    random_index = random.randrange(len(words))
+    print(words[random_index])
+    del words[random_index] #убирает повторы
+#5
+import re
+
+text = "Сегодня 21 феврeаля 2011."
+
+# Паттерн для поиска дат в формате "число название_месяца год"
+pattern = r"\d{1,2} \w+ \d{4}"
+
+# нахождения всех совпадений
+dates = re.findall(pattern, text)
+print("Найденные даты:")
+for date in dates:
+    print(date)
+#6
+def countrus(s):
+    count = 0
+    for i in range(0,len(s)):
+        if s[i]>'5':
+            count+=1
+    return count
+s=input()
+print("k=",countrus(s))
+#7
+import string
+s = "Привет, мир!"
+all_cyrillic_chars = set(chr(c) for c in range(ord('А'), ord('я')+1))
+used_chars = set(s)
+unused_chars = all_cyrillic_chars - used_chars
+print("Неиспользуемые символы кириллицы:", unused_chars)
+#8
+import string
+s = '46 235 4 8 37'
+nums = [int(n) for n in s.split()]
+print(max(nums))
+#9
+l = ['aa','aaa','aaaa','b','bb','z','ccc']
+sort_key = lambda s: (-len(s), s)
+l.sort(key=sort_key)
+print(l)
+#10
+mylist = ["a short string", "long string","veeeeerylongstring"]
+mylist.sort(key=lambda x: len(x.split()), reverse=False)
+print(mylist)
+#11
+def frequency_difference(string):#частота символов
+    letter_freq = {}
+    for char in string:
+        if char.isalpha():
+            char = char.lower()
+            if char in letter_freq:
+                letter_f req[char] += 1
+            else:
+                letter_freq[char] = 1
+
+    max_freq_char = max(letter_freq, key=letter_freq.get)
+    freq_difference = letter_freq[max_freq_char]
+
+    return freq_difference
+
+def sort_strings_by_frequency_difference(list):
+    return sorted(list, key=frequency_difference)
+
+# Пример использования
+list=[]
+print("Сколько строк?")
+g=int(input())
+for j in range (1,g+1):
+    s=input()
+    list.append(s)
+sorted_strings = sort_strings_by_frequency_difference(list)
+
+for string in sorted_strings:
+    print(string, frequency_difference(string))
+№12
+def calculate_median(numbers):
+    numbers.sort()
+    n = len(numbers)
+    if n % 2 == 0:
+        return (numbers[n // 2 - 1] + numbers[n // 2]) / 2
+    else:
+        return numbers[n // 2]
+
+def sort_number_strings_by_median(number_strings):
+    return sorted(number_strings, key=lambda x: calculate_median(list(map(int, x.split()))))
+
+number_strings = ["9 5 7", "2 4 6 8", "1 3 5 7 9", "1 2 3 4"]
+sorted_number_strings = sort_number_strings_by_median(number_strings)
+
+for number_string in sorted_number_strings:
+    print(number_string, "median= ",calculate_median(list(map(int, number_string.split()))))
+№13
+def calculate_avg_ascii_weight(string):#сред аски вывод
+    total_weight = 0
+    for char in string:
+        total_weight += ord(char)
+    return total_weight / len(string)
+
+def calculate_max_triplet_avg(string):#макс сред аски в тройке симв
+    max_avg = 0
+    for i in range(len(string) - 2):
+        triplet = string[i:i+3]
+        triplet_weight = sum(ord(char) for char in triplet) / 3
+        max_avg = max(max_avg, triplet_weight)
+    return max_avg
+
+def calculate_quad_deviation(string):#квадр отклонение 
+    avg_weight = calculate_avg_ascii_weight(string)
+    triplet_avg = calculate_max_triplet_avg(string)
+    return "quad_deviation= ",(avg_weight - triplet_avg) ** 2
+
+def sort_strings_by_quad_deviation(strings):
+    return sorted(strings, key=calculate_quad_deviation)
+
+
+strings=[]
+print("Сколько строк?")
+g=int(input())
+for j in range (1,g+1):
+    s = input()
+    strings.append(s)
+
+sorted_strings = sort_strings_by_quad_deviation(strings)
+
+for string in sorted_strings:
+    print(string, calculate_quad_deviation(string))
+#14 
+from collections import Counter
+
+def calculate_most_common_frequency(strings):
+    symbol_counter = Counter("".join(strings))
+    most_common_symbol = symbol_counter.most_common(1)[0][0]#самый частый симв в наборе строк
+    most_common_frequency = symbol_counter[most_common_symbol]
+    return most_common_symbol, most_common_frequency #самый частый символ и его частота
+
+def sort_strings_by_deviation(strings):
+    most_common_symbol, _ = calculate_most_common_frequency(strings)
+    return sorted(strings, key=lambda x: (calculate_most_common_frequency(strings)[1] - x.count(most_common_symbol))**2)
+
+
+strings=[]
+print("Сколько строк?")
+g=int(input())
+for j in range (1,g+1):
+    s = input()
+    strings.append(s)
+sorted_strings = sort_strings_by_deviation(strings)
+
+for string in sorted_strings:
+    most_common_symbol, _ = calculate_most_common_frequency(strings)  # Получение самого распространенного символа
+    print(string, string.count(most_common_symbol))
+№15
+def shift_left(arr, k):
+    if len(arr) == 0:
+        return arr
+    n = len(arr)
+    k = k % n  # Учитываем случай, если k больше длины массива
+    return arr[k:] + arr[:k]
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+shifted_arr = shift_left(arr, 3)#3 это смещение на 3 позиции
+print(shifted_arr)
+№16 
+def find_elements_before_min(arr):
+    if not arr:  # Проверка на пустой массив
+        return []
+
+    min_index = arr.index(min(arr))  # Ищем индекс первого минимального элемента
+    return arr[:min_index]  # Возвращаем элементы до минимального
+
+arr=[]
+print("Сколько элементов?")
+g=int(input())
+for j in range (1,g+1):
+    s = int(input())
+    arr.append(s)
+#arr = [5, 3, 8, 1, 2, 7, 9]
+result = find_elements_before_min(arr)
+print("Элементы до первого минимального элемента:", result)
+#17
+def is_local_max(arr, index):
+    if index == 0:#первый элеиент
+        return arr[index] > arr[index+1]
+    elif index == len(arr) - 1:#последний элемент
+        return arr[index] > arr[index-1]
+    else:
+        return arr[index] > arr[index-1] and arr[index] > arr[index+1]
+
+# Пример использования
+arr = [5, 3, 8, 1, 2, 7, 9]
+index = 0  # Проверим элемент с индексом 2 (значение 8)
+result = is_local_max(arr, index)
+if result:
+    print(f"Элемент с индексом {index} является локальным максимумом.")
+else:
+    print(f"Элемент с индексом {index} не является локальным максимумом.")
+№18
+arr = [5, 3, 8, 1, 2, 7, 9]
+aver=sum(arr)/len(arr)
+print("average = ",aver)
+for i in range(1,len(arr)):
+    if arr[i]<aver:
+        print(arr[i])
+№19
+def find_elements(list):
+    if not list:  # Проверка на пустой список
+        return []
+
+    element_counts = {}  # Словарь для подсчета количества вхождений каждого элемента
+    for elem in list:
+        if elem in element_counts:
+            element_counts[elem] += 1
+        else:
+            element_counts[elem] = 1
+
+    result = [key for key, value in element_counts.items() if
+              value > 3]  # Формирование списка элементов, удовлетворяющих условию
+    return result
+
+
+list = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5]
+result = find_elements(list)
+print("Элементы, встречающиеся более трех раз:", result)

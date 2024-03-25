@@ -1,0 +1,39 @@
+#1
+sentence = ("She sells sea shells on the sea shore; "
+            "The shells that she sells are sea shells I'm sure. "
+            "So if she sells sea shells on the sea shore. "
+            "I'm sure that the shells are sea shore shells.")
+
+words = sentence.split()#разделение на слова
+word_dict = {}
+
+for word in words:
+    word = word.strip(".,;")#уборка данных символов в словах
+    if word.lower() not in word_dict:
+        word_dict[word] = 1
+
+unique_words_count = len(word_dict)
+print(unique_words_count)
+
+#2
+sentence = ("hi "
+            "hi "
+            "what is your name "
+            "my name is bond "
+            "james bond "
+            "my name is damme "
+            "van damme "
+            "claude van damme "
+            "jean claude van damme")
+
+words = sentence.split()
+word_dict = {}
+
+for word in words:
+    word = word.strip(".,;")
+    if word.lower() not in word_dict:
+        word_dict[word] = 1
+    else:
+        word_dict[word]+=1
+word_dict=sorted(word_dict.items(),key=lambda x:x[1],reverse=True)
+print(word_dict)
